@@ -1,0 +1,212 @@
+/*!
+    Analog library competition
+*/
+/*--------------------------------------------------------------
+    VARIABLES, IMPORTS, ETC.
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+    BASIC LAYOUT
+--------------------------------------------------------------*/
+@font-face {
+	font-family: 'Futura';
+	src: url('fonts/FuturaStd-Medium.eot');
+	src: local('☺'), url('fonts/FuturaStd-Medium.woff') format('woff'), url('fonts/FuturaStd-Medium.ttf') format('truetype'), url('fonts/FuturaStd-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+::selection {
+	background: #333;
+	color: #fff;
+}
+
+html {
+/*	background: -webkit-linear-gradient(#FFDAB9, #EC439E, #FFDAB9) repeat;
+	background: linear-gradient(#FFDAB9, #EC439E, #FFDAB9) repeat;
+	background: url(img/og_image.jpg);
+	background-size: cover;*/
+	background: #222;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+body {
+	background: none;
+  font-family: Georgia, serif;
+  font-size: 16px; }
+  
+span, div {
+  font-family: 'Futura', Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Futura', Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #333; }
+
+h1, h2 {
+  background-color: #fff;
+  padding: 0.5rem;
+  text-align: center;
+  border-bottom: 3px solid #333; }
+
+h2 {
+  margin: 4rem 0 2rem; }
+
+.background {
+/*  background: url(img/og_image.jpg);*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+.background img {
+	position: fixed;
+}
+
+.content {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  overflow: hidden;
+  position: relative; }
+
+.itu-mail, .description, .headline, .image_link {
+  background-color: #333;
+  border: none;
+  color: #ccc;
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  margin-bottom: 1rem; }
+  .itu-mail:focus, .description:focus, .headline:focus, .image_link:focus {
+    border: none;
+    outline: 2px solid #333; }
+
+.intro-text {
+	font-family: "Georgia", sans-serif;
+}
+
+.intro-text img {
+	border-color: #333;
+	border-style: solid;
+	border-width: 2px 0px;
+	padding: 2rem 0;
+}
+
+.description {
+  min-height: 150px; }
+  
+.descrip_result {
+	display: block;
+	font-family: "Georgia", sans-serif;
+	text-transform: none;}
+	
+.headline_result {
+	margin-bottom: 0;
+	margin-top: 0;}
+	
+.points_result {
+	display: none;
+	font-size: 1.5rem;}
+
+.itu_mail_result {
+	display: inline-block; 
+	text-transform: lowercase;}
+	
+.byline {
+	color: #333;
+	font-size: 1.25rem;
+	font-style: italic;}
+
+.upvote {
+	display: none !important;
+	padding: 0.5rem 0;}
+
+.submit {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  padding: 0.5rem 2rem;
+  font-family: 'Futura', Helvetica, sans-serif;
+  text-transform: uppercase;
+  transition: all 250ms; }
+  .submit:focus {
+    border: none;
+    outline: none; }
+  .submit:hover {
+    background-color: #333;
+    color: #ccc; }
+
+.ideas-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .ideas-list li {
+  	border-bottom: 1px solid #333;
+  	padding-bottom: 0.5rem;
+    margin-bottom: 2rem; }
+    .ideas-list li:before {
+/*      content: 'Headline';
+      display: block;
+      font-family: 'Futura', Helvetica, sans-serif;
+      font-size: 1.75rem;
+      margin-bottom: 0.25rem; */}
+    .ideas-list li a {
+      display: block;
+      font-family: 'Futura', Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      color: #333; }
+
+.ideas-list li a.linker {
+	display: inline;
+	padding-left: 1rem;}
+	
+.ideas-list li span.hint {
+	background: #333;
+	border-radius: 0.25rem;
+	color: #ccc;
+	display: inline;
+	font-size: 1rem;
+	margin-left: 1rem;
+	padding: 0.5rem 1rem 0.5rem 0.5rem;
+	text-decoration: none; }
+	.ideas-list li span.hint:before {
+		background: #333;
+		border-bottom-left-radius: 0.25rem;
+		content: "";
+		display: inline-block;
+		height: 1rem;
+		left: -1rem;
+		position: relative;
+		transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		top: 0.15rem;
+		width: 1rem;
+	}
+	
+.image_link_result {
+	margin: 0.5rem 0;
+}
+
+.ideas-list .image_link_result a {
+	background: #ccc;
+	color: #333;
+	display: inline;
+	padding: 0.5rem;
+	transition: all 250ms;
+}
+
+.ideas-list .image_link_result a:hover {
+	color: #fff;
+	text-decoration: none;
+}

@@ -1,0 +1,150 @@
+/*!
+    Analog birthday competition
+*/
+
+
+/*--------------------------------------------------------------
+    VARIABLES, IMPORTS, ETC.
+--------------------------------------------------------------*/
+
+$sans-serif: 'Futura', Helvetica, sans-serif;
+$serif: Georgia, serif;
+
+@mixin clearfix() {
+    &:after { 
+       content: ""; 
+       visibility: hidden; 
+       display: block; 
+       height: 0; 
+       clear: both;
+    }
+}
+
+
+/*--------------------------------------------------------------
+    BASIC LAYOUT
+--------------------------------------------------------------*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    //background-image: url('http://cafeanalog.dk/volunteer/bg.jpg');
+    font-family: $serif;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+    font-family: $sans-serif;
+    text-transform: uppercase;
+    color: lightcoral;
+}
+
+h1, h2 {
+    background-color: ghostwhite;
+    padding: 0.5rem;
+    text-align: center;
+    border-bottom: 3px solid powderblue;
+}
+
+h2 {
+    margin: 4rem 0 2rem;
+}
+
+.background {
+    background: linear-gradient(#FFDAB9, #EC439E) no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.content {
+    background-color: #fff;
+    padding: 1rem 2rem; 
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.itu-mail, .description {
+    background-color: rgb(216, 239, 242);
+    border: none;
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+
+    &:focus {
+        border: 2px solid lightcoral;
+        outline: none;
+    }
+}
+
+.description {
+    min-height: 150px;
+}
+
+.submit {
+    background-color: lightcoral;
+    color: ghostwhite;
+    border: none;
+    padding: 0.5rem 2rem;
+    font-family: $sans-serif;
+    text-transform: uppercase;
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+    &:hover {
+        background-color: #FFDAB9;
+        color: lightcoral;
+    }
+}
+
+.ideas-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        margin-bottom: 2rem;
+
+        &:before {
+            content: 'Headline';
+            display: block;
+            font-family: $sans-serif;
+            font-size: 1.75rem;
+            margin-bottom: 0.25rem;
+        }
+
+        a {
+            display: block;
+            font-family: $sans-serif;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            padding: 0.5rem 0 0 1rem;
+            color: lightcoral;
+
+            &:after {
+                content: 'Vote!';
+                padding-left: 1rem;
+                vertical-align: middle;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+
